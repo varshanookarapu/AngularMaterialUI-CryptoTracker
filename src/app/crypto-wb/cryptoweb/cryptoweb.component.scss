@@ -1,0 +1,27 @@
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    background-image: url('/AngularMaterialProject/src/assets/images/cryptoimg.jpg');
+    background-size: cover;
+    z-index:-1;
+   
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    table,mat-paginator,tr{
+        width: 800px;
+
+
+    }
+}
+

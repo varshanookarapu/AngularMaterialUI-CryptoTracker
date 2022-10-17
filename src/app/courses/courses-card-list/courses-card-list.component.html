@@ -1,0 +1,45 @@
+<mat-card
+  style="margin: 20px 10px; width: 300px"
+  *ngFor="let course of beginnerCourses"
+  mat-elevation-z7
+>
+  <mat-card-header style="padding-left: 100px">
+    <mat-card-title>{{ course.title }}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    style="width: 250px; height: 200px; padding-left: 40px"
+    [src]="course.images"
+  />
+  <mat-card-content>
+    <p>{{ course.description }}</p>
+  </mat-card-content>
+  <mat-card-actions style="text-align: center">
+    <button mat-raised-button color="primary">View Course</button>
+    <button mat-raised-button color="accent">Edit Course</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card
+  style="margin: 20px 10px; width: 300px"
+  *ngFor="let course of advancedCourses"
+  mat-elevation-z7
+>
+  <mat-card-header style="padding-left: 100px">
+    <mat-card-title>{{ course.title }}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    style="width: 250px; height: 200px; padding-left: 40px"
+    [src]="course.images"
+  />
+  <mat-card-content>
+    <p>{{ course.description }}</p>
+  </mat-card-content>
+  <mat-card-actions style="text-align: center">
+    <button mat-raised-button color="primary">View Course</button>
+    <button mat-raised-button color="accent" (click)="editCourse()">
+      Edit Course
+    </button>
+  </mat-card-actions>
+</mat-card>

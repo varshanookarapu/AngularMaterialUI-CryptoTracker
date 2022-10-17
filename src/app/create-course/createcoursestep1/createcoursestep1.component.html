@@ -1,0 +1,71 @@
+<div [formGroup]="form" class="course-details-form">
+  <mat-form-field floatLabel="never">
+    <input matInput placeholder="Course Title" formControlName="title" #title />
+  </mat-form-field>
+  <mat-error *ngIf="courseTitle.errors">
+    A minimum length of 5 characters is required
+  </mat-error>
+
+  <mat-form-field apperance="outline" floatLabel="always">
+    <input matInput placeholder="Course Type" formControlName="category" />
+  </mat-form-field>
+
+  <mat-form-field apperance="outline" floatLabel="auto">
+    <input
+      matInput
+      placeholder="Number of Downloads"
+      formControlName="downloadsAllowed"
+    />
+    <!-- <span matSuffix> $ </span>
+    <span matPrefix> +2 </span> -->
+  </mat-form-field>
+
+  <mat-form-field apperance="outline">
+    <input
+      matInput
+      placeholder="Description"
+      formControlName="longDescription"
+      #desc
+    />
+    <mat-hint align="end">{{ desc.value.length }}/60</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field apperance="outline">
+    <mat-select formControlName="category" placeholder="Select Category">
+      <mat-option>none</mat-option>
+      <mat-optgroup label="Beginners">
+        <mat-option value="beginner1">Beginner To Programming</mat-option>
+        <mat-option value="beginner2">Beginner To Angular</mat-option>
+        <mat-option value="beginne3">Beginner To Javascript</mat-option>
+      </mat-optgroup>
+      <mat-option value="INTERMEDIATE">Intermediate</mat-option>
+      <mat-option value="Advanced">Advanced</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-radio-group class="course-type" formControlName="courseType">
+    <mat-radio-button [disabled]="true">Free</mat-radio-button>
+    <mat-radio-button>Premium</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      placeholder="Select Date"
+      formControlName="releasedAt"
+      [matDatepicker]="releasedAtPicker"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="releasedAtPicker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #releasedAtPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-checkbox
+    color="accent"
+    formControlName="downloadsAllowed"
+    [indeterminate]="true"
+    >Downloads Allowed?</mat-checkbox
+  >
+</div>
