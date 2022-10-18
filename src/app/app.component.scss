@@ -1,0 +1,33 @@
+.bubbles{
+    display: flex;
+    position:relative;
+span{
+width:20px;
+height:20px;
+position:relative;
+background-color: rgb(91, 11, 195);
+margin:0px 10px;
+border-radius: 50%;
+box-shadow: 0 0 0 10px rgb(59, 57, 57),0 0 50px  rgb(91, 11, 195),0 0 100px  rgb(91, 11, 195);
+animation:animate 15s linear infinite; 
+z-index:-1;
+animation-duration: calc(120s/var(--i));
+}
+
+span:nth-child(even){
+    background-color: violet; 
+    box-shadow: 0 0 0 10px rgb(107, 66, 102),0 0 50px violet,0 0 100px violet;
+}
+
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(100vh) scale(0)
+    }
+     
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
