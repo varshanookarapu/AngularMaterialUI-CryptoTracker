@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ParticlesModule } from 'angular-particle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -74,7 +75,9 @@ import { CoinDetailComponent } from './crypto-wb/coin-detail/coin-detail.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     BrowserAnimationsModule,
+
     MatMenuModule,
     MatButtonModule,
     MatIconModule,

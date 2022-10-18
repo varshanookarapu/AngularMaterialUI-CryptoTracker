@@ -1,0 +1,39 @@
+.container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    flex:1;
+}
+
+.example-card{
+    height:500px;
+    width:450px;
+    border-radius: 25px;
+    border: 2px solid violet;
+}
+
+.graph{
+    width:900px;
+    height:530px;
+    border-radius: 25px;
+    border: 2px solid violet;
+    background-color: lightgray;
+    color:black;
+    text-align:center;
+}
+
+h2,h3{
+    font-weight: 500;
+}
+
+.card-image {
+    width: calc(100% + -169px);
+    margin: -1px 4px 0px 69px;
+    display: block;
+    overflow: hidden;
+}
+h4{
+    margin-top: 27px;
+}
